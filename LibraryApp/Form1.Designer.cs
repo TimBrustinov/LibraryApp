@@ -29,250 +29,260 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.registerNewClientUserControl1 = new LibraryApp.RegisterNewClientUserControl();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CheckinBookMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkoutBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registerNewClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editClientInformationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteClientProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.catalogToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.searchClientsDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.clientsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.booksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.authorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkInOutOverviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.registerNewClientUserControl2 = new LibraryApp.RegisterNewClientUserControl();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.bookPanel = new System.Windows.Forms.Panel();
+            this.removeBookButton = new System.Windows.Forms.Button();
+            this.addBookButton = new System.Windows.Forms.Button();
+            this.checkinBookButton = new System.Windows.Forms.Button();
+            this.bookDropDownTimer = new System.Windows.Forms.Timer(this.components);
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.updateBookButton = new System.Windows.Forms.Button();
+            this.selectedTab = new FontAwesome.Sharp.IconButton();
+            this.Clients = new FontAwesome.Sharp.IconButton();
+            this.Books = new FontAwesome.Sharp.IconButton();
+            this.Database = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.bookPanel.SuspendLayout();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
             // 
             // fileSystemWatcher1
             // 
             this.fileSystemWatcher1.EnableRaisingEvents = true;
             this.fileSystemWatcher1.SynchronizingObject = this;
             // 
-            // contextMenuStrip1
+            // flowLayoutPanel1
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.flowLayoutPanel1.Controls.Add(this.Clients);
+            this.flowLayoutPanel1.Controls.Add(this.bookPanel);
+            this.flowLayoutPanel1.Controls.Add(this.Database);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(204, 714);
+            this.flowLayoutPanel1.TabIndex = 1;
             // 
-            // registerNewClientUserControl1
+            // bookPanel
             // 
-            this.registerNewClientUserControl1.Location = new System.Drawing.Point(0, 0);
-            this.registerNewClientUserControl1.Name = "registerNewClientUserControl1";
-            this.registerNewClientUserControl1.Size = new System.Drawing.Size(1002, 341);
-            this.registerNewClientUserControl1.TabIndex = 2;
+            this.bookPanel.Controls.Add(this.updateBookButton);
+            this.bookPanel.Controls.Add(this.removeBookButton);
+            this.bookPanel.Controls.Add(this.addBookButton);
+            this.bookPanel.Controls.Add(this.checkinBookButton);
+            this.bookPanel.Controls.Add(this.Books);
+            this.bookPanel.Location = new System.Drawing.Point(3, 69);
+            this.bookPanel.MaximumSize = new System.Drawing.Size(199, 195);
+            this.bookPanel.MinimumSize = new System.Drawing.Size(199, 60);
+            this.bookPanel.Name = "bookPanel";
+            this.bookPanel.Size = new System.Drawing.Size(199, 194);
+            this.bookPanel.TabIndex = 3;
             // 
-            // menuToolStripMenuItem
+            // removeBookButton
             // 
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CheckinBookMenuItem,
-            this.checkoutBookToolStripMenuItem,
-            this.addNewBookToolStripMenuItem,
-            this.removToolStripMenuItem,
-            this.updateBookToolStripMenuItem,
-            this.bookToolStripMenuItem});
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
-            this.menuToolStripMenuItem.Text = "Books";
+            this.removeBookButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.removeBookButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.removeBookButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.removeBookButton.FlatAppearance.BorderSize = 0;
+            this.removeBookButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.removeBookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeBookButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.removeBookButton.Location = new System.Drawing.Point(0, 126);
+            this.removeBookButton.Name = "removeBookButton";
+            this.removeBookButton.Size = new System.Drawing.Size(199, 33);
+            this.removeBookButton.TabIndex = 5;
+            this.removeBookButton.Text = "Remove Book";
+            this.removeBookButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.removeBookButton.UseVisualStyleBackColor = false;
+            this.removeBookButton.Click += new System.EventHandler(this.removeBookButton_Click);
             // 
-            // CheckinBookMenuItem
+            // addBookButton
             // 
-            this.CheckinBookMenuItem.Name = "CheckinBookMenuItem";
-            this.CheckinBookMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.CheckinBookMenuItem.Text = "Checkin Book";
+            this.addBookButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.addBookButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.addBookButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.addBookButton.FlatAppearance.BorderSize = 0;
+            this.addBookButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBookButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.addBookButton.Location = new System.Drawing.Point(0, 93);
+            this.addBookButton.Name = "addBookButton";
+            this.addBookButton.Size = new System.Drawing.Size(199, 33);
+            this.addBookButton.TabIndex = 4;
+            this.addBookButton.Text = "Add New Book";
+            this.addBookButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addBookButton.UseVisualStyleBackColor = false;
+            this.addBookButton.Click += new System.EventHandler(this.addBookButton_Click);
             // 
-            // checkoutBookToolStripMenuItem
+            // checkinBookButton
             // 
-            this.checkoutBookToolStripMenuItem.Name = "checkoutBookToolStripMenuItem";
-            this.checkoutBookToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.checkoutBookToolStripMenuItem.Text = "Checkout Book";
+            this.checkinBookButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.checkinBookButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.checkinBookButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.checkinBookButton.FlatAppearance.BorderSize = 0;
+            this.checkinBookButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkinBookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkinBookButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.checkinBookButton.Location = new System.Drawing.Point(0, 60);
+            this.checkinBookButton.Name = "checkinBookButton";
+            this.checkinBookButton.Size = new System.Drawing.Size(199, 33);
+            this.checkinBookButton.TabIndex = 3;
+            this.checkinBookButton.Text = "Check-In/Out Book";
+            this.checkinBookButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.checkinBookButton.UseVisualStyleBackColor = false;
+            this.checkinBookButton.Click += new System.EventHandler(this.checkinBookButton_Click);
             // 
-            // addNewBookToolStripMenuItem
+            // bookDropDownTimer
             // 
-            this.addNewBookToolStripMenuItem.Name = "addNewBookToolStripMenuItem";
-            this.addNewBookToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.addNewBookToolStripMenuItem.Text = "Add New Book";
+            this.bookDropDownTimer.Interval = 15;
+            this.bookDropDownTimer.Tick += new System.EventHandler(this.bookDropDownTimer_Tick);
             // 
-            // removToolStripMenuItem
+            // flowLayoutPanel2
             // 
-            this.removToolStripMenuItem.Name = "removToolStripMenuItem";
-            this.removToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.removToolStripMenuItem.Text = "Remove Book";
+            this.flowLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(10)))), ((int)(((byte)(48)))));
+            this.flowLayoutPanel2.Controls.Add(this.selectedTab);
+            this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(204, 0);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(900, 63);
+            this.flowLayoutPanel2.TabIndex = 2;
             // 
-            // updateBookToolStripMenuItem
+            // updateBookButton
             // 
-            this.updateBookToolStripMenuItem.Name = "updateBookToolStripMenuItem";
-            this.updateBookToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.updateBookToolStripMenuItem.Text = "Update Book";
+            this.updateBookButton.BackColor = System.Drawing.Color.RoyalBlue;
+            this.updateBookButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.updateBookButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.updateBookButton.FlatAppearance.BorderSize = 0;
+            this.updateBookButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateBookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateBookButton.ForeColor = System.Drawing.Color.Gainsboro;
+            this.updateBookButton.Location = new System.Drawing.Point(0, 159);
+            this.updateBookButton.Name = "updateBookButton";
+            this.updateBookButton.Size = new System.Drawing.Size(199, 35);
+            this.updateBookButton.TabIndex = 6;
+            this.updateBookButton.Text = "Update Book";
+            this.updateBookButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.updateBookButton.UseVisualStyleBackColor = false;
+            this.updateBookButton.Click += new System.EventHandler(this.updateBookButton_Click);
             // 
-            // bookToolStripMenuItem
+            // selectedTab
             // 
-            this.bookToolStripMenuItem.Name = "bookToolStripMenuItem";
-            this.bookToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
-            this.bookToolStripMenuItem.Text = "Book Availability";
+            this.selectedTab.Dock = System.Windows.Forms.DockStyle.Top;
+            this.selectedTab.FlatAppearance.BorderSize = 0;
+            this.selectedTab.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selectedTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.selectedTab.ForeColor = System.Drawing.Color.Gainsboro;
+            this.selectedTab.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.selectedTab.IconColor = System.Drawing.Color.Gainsboro;
+            this.selectedTab.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.selectedTab.IconSize = 32;
+            this.selectedTab.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.selectedTab.Location = new System.Drawing.Point(3, 3);
+            this.selectedTab.Name = "selectedTab";
+            this.selectedTab.Size = new System.Drawing.Size(162, 60);
+            this.selectedTab.TabIndex = 3;
+            this.selectedTab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.selectedTab.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.selectedTab.UseVisualStyleBackColor = true;
             // 
-            // clientsToolStripMenuItem
+            // Clients
             // 
-            this.clientsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registerNewClientToolStripMenuItem,
-            this.editClientInformationToolStripMenuItem,
-            this.deleteClientProfileToolStripMenuItem,
-            this.clientHistoryToolStripMenuItem});
-            this.clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
-            this.clientsToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.clientsToolStripMenuItem.Text = "Clients";
+            this.Clients.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Clients.FlatAppearance.BorderSize = 0;
+            this.Clients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clients.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Clients.IconChar = FontAwesome.Sharp.IconChar.Person;
+            this.Clients.IconColor = System.Drawing.Color.Gainsboro;
+            this.Clients.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Clients.IconSize = 32;
+            this.Clients.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Clients.Location = new System.Drawing.Point(3, 3);
+            this.Clients.Name = "Clients";
+            this.Clients.Size = new System.Drawing.Size(195, 60);
+            this.Clients.TabIndex = 3;
+            this.Clients.Text = "Clients";
+            this.Clients.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Clients.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Clients.UseVisualStyleBackColor = true;
             // 
-            // registerNewClientToolStripMenuItem
+            // Books
             // 
-            this.registerNewClientToolStripMenuItem.Name = "registerNewClientToolStripMenuItem";
-            this.registerNewClientToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.registerNewClientToolStripMenuItem.Text = "Register New Client";
-            this.registerNewClientToolStripMenuItem.Click += new System.EventHandler(this.registerNewClientToolStripMenuItem_Click);
+            this.Books.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Books.FlatAppearance.BorderSize = 0;
+            this.Books.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Books.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Books.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Books.IconChar = FontAwesome.Sharp.IconChar.Book;
+            this.Books.IconColor = System.Drawing.Color.Gainsboro;
+            this.Books.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Books.IconSize = 32;
+            this.Books.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Books.Location = new System.Drawing.Point(0, 0);
+            this.Books.Name = "Books";
+            this.Books.Size = new System.Drawing.Size(199, 60);
+            this.Books.TabIndex = 2;
+            this.Books.Text = "Books";
+            this.Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Books.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Books.UseVisualStyleBackColor = false;
+            this.Books.Click += new System.EventHandler(this.Books_Click);
             // 
-            // editClientInformationToolStripMenuItem
+            // Database
             // 
-            this.editClientInformationToolStripMenuItem.Name = "editClientInformationToolStripMenuItem";
-            this.editClientInformationToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.editClientInformationToolStripMenuItem.Text = "Edit Client Information";
-            // 
-            // deleteClientProfileToolStripMenuItem
-            // 
-            this.deleteClientProfileToolStripMenuItem.Name = "deleteClientProfileToolStripMenuItem";
-            this.deleteClientProfileToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.deleteClientProfileToolStripMenuItem.Text = "Delete Client Profile";
-            // 
-            // clientHistoryToolStripMenuItem
-            // 
-            this.clientHistoryToolStripMenuItem.Name = "clientHistoryToolStripMenuItem";
-            this.clientHistoryToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.clientHistoryToolStripMenuItem.Text = "Client History";
-            // 
-            // catalogToolStripMenuItem
-            // 
-            this.catalogToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.searchClientsDatabaseToolStripMenuItem});
-            this.catalogToolStripMenuItem.Name = "catalogToolStripMenuItem";
-            this.catalogToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.catalogToolStripMenuItem.Text = "Catalog";
-            // 
-            // searchClientsDatabaseToolStripMenuItem
-            // 
-            this.searchClientsDatabaseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientsToolStripMenuItem1,
-            this.booksToolStripMenuItem,
-            this.authorsToolStripMenuItem,
-            this.checkInOutOverviewToolStripMenuItem});
-            this.searchClientsDatabaseToolStripMenuItem.Name = "searchClientsDatabaseToolStripMenuItem";
-            this.searchClientsDatabaseToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.searchClientsDatabaseToolStripMenuItem.Text = "Search Database";
-            // 
-            // clientsToolStripMenuItem1
-            // 
-            this.clientsToolStripMenuItem1.Name = "clientsToolStripMenuItem1";
-            this.clientsToolStripMenuItem1.Size = new System.Drawing.Size(199, 22);
-            this.clientsToolStripMenuItem1.Text = "Clients";
-            // 
-            // booksToolStripMenuItem
-            // 
-            this.booksToolStripMenuItem.Name = "booksToolStripMenuItem";
-            this.booksToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.booksToolStripMenuItem.Text = "Books";
-            // 
-            // authorsToolStripMenuItem
-            // 
-            this.authorsToolStripMenuItem.Name = "authorsToolStripMenuItem";
-            this.authorsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.authorsToolStripMenuItem.Text = "Authors";
-            // 
-            // checkInOutOverviewToolStripMenuItem
-            // 
-            this.checkInOutOverviewToolStripMenuItem.Name = "checkInOutOverviewToolStripMenuItem";
-            this.checkInOutOverviewToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.checkInOutOverviewToolStripMenuItem.Text = "Check-In/Out Overview";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem,
-            this.clientsToolStripMenuItem,
-            this.catalogToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(962, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // registerNewClientUserControl2
-            // 
-            this.registerNewClientUserControl2.Location = new System.Drawing.Point(0, 77);
-            this.registerNewClientUserControl2.Name = "registerNewClientUserControl2";
-            this.registerNewClientUserControl2.Size = new System.Drawing.Size(989, 341);
-            this.registerNewClientUserControl2.TabIndex = 2;
+            this.Database.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Database.FlatAppearance.BorderSize = 0;
+            this.Database.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Database.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Database.ForeColor = System.Drawing.Color.Gainsboro;
+            this.Database.IconChar = FontAwesome.Sharp.IconChar.Database;
+            this.Database.IconColor = System.Drawing.Color.Gainsboro;
+            this.Database.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Database.IconSize = 32;
+            this.Database.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Database.Location = new System.Drawing.Point(3, 269);
+            this.Database.Name = "Database";
+            this.Database.Size = new System.Drawing.Size(195, 60);
+            this.Database.TabIndex = 4;
+            this.Database.Text = "Database";
+            this.Database.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Database.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Database.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 545);
-            this.Controls.Add(this.registerNewClientUserControl2);
-            this.Controls.Add(this.menuStrip1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(20)))), ((int)(((byte)(58)))));
+            this.ClientSize = new System.Drawing.Size(1104, 714);
+            this.Controls.Add(this.flowLayoutPanel2);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.bookPanel.ResumeLayout(false);
+            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private RegisterNewClientUserControl registerNewClientUserControl1;
-        private RegisterNewClientUserControl registerNewClientUserControl2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem CheckinBookMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem checkoutBookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addNewBookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateBookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registerNewClientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editClientInformationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deleteClientProfileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientHistoryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem catalogToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem searchClientsDatabaseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientsToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem booksToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem authorsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem checkInOutOverviewToolStripMenuItem;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private FontAwesome.Sharp.IconButton Books;
+        private FontAwesome.Sharp.IconButton Clients;
+        private FontAwesome.Sharp.IconButton Database;
+        private System.Windows.Forms.Panel bookPanel;
+        private System.Windows.Forms.Button checkinBookButton;
+        private System.Windows.Forms.Button addBookButton;
+        private System.Windows.Forms.Timer bookDropDownTimer;
+        private System.Windows.Forms.Button removeBookButton;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private FontAwesome.Sharp.IconButton selectedTab;
+        private System.Windows.Forms.Button updateBookButton;
     }
 }
 
